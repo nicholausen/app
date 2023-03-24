@@ -1,6 +1,4 @@
 import streamlit as st
-import numpy as np
-
 
 st.header(':heart:')
 
@@ -13,6 +11,9 @@ if st.button('Album1', key='Album1'):
         'Choose a track',
         ['Hotline Bling.mp3', 'One Dance.mp3', 'Too Good (feat Rihanna).mp3'])
 
+audio_file = open('Hotline Bling.mp3', 'rb')
+audio_bytes = audio_file.read()
+
 
 if st.button('Album2', key='Album2'):
     options = st.multiselect(
@@ -20,6 +21,4 @@ if st.button('Album2', key='Album2'):
         ['traccia1', 'traccia2', 'traccia3', 'Blue'])
 
 
-audio_file = open('myaudio.ogg', 'rb')
-audio_bytes = audio_file.read()
 
